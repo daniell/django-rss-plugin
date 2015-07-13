@@ -25,6 +25,12 @@ Add rssplugin to your INSTALLED_APPS in Django settings.py file, Like following:
   	'rssplugin',
   )
 
+
+If you are using Django 1.7 or higher add the following to your MIGRATION_MODULES setting::
+
+  'rssplugin': 'rssplugin.migrations_django'
+
+
 Run south migrate to install plugin database::
 
   $ python manage.py migrate rssplugin
